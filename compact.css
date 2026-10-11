@@ -1,0 +1,27 @@
+/* Compact spacing without changing section order or column layouts. */
+.container-fluid.py-5,section.container.py-5{padding-top:40px!important;padding-bottom:40px!important}
+.container-fluid.py-5>.container.py-5{padding-top:0!important;padding-bottom:0!important}
+#AboutUs{padding-top:32px;padding-bottom:32px}
+#AboutUs .py-5,#AboutUs .pb-lg-5{padding-top:0!important;padding-bottom:0!important}
+.title{margin-bottom:24px!important}
+.service-item{margin-top:20px}
+.service-item .service-img{padding:24px!important}
+.service-item .service-img img{width:220px;max-width:100%;aspect-ratio:1;object-fit:cover}
+.service-item .service-img::before{width:calc(100% - 40px);height:calc(100% - 40px);border-width:12px}
+.service-item .service-text{padding:24px!important}
+.service-text p:last-child{margin-bottom:0}
+.footer.py-5{padding-top:28px!important;padding-bottom:28px!important}
+.footer>.container.py-5{padding:0!important}
+.footer .mb-4{margin-bottom:14px!important}
+.form-label{margin-bottom:16px}
+.page-header2{padding-top:110px!important;padding-bottom:24px!important}
+.page-header2>.container.py-5{padding-top:0!important;padding-bottom:0!important}
+@media(max-width:767px){
+ .container-fluid.py-5,section.container.py-5{padding-top:28px!important;padding-bottom:28px!important}
+ .service-item{margin-top:16px}
+ .service-item .service-img{padding:18px!important}
+ .service-item .service-img img{width:180px}
+ .service-item .service-text{padding:16px 22px 22px!important}
+ .title{margin-bottom:18px!important}
+}
+

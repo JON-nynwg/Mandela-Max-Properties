@@ -1,0 +1,36 @@
+/* Palette sampled from the supplied reference screenshots. No layout overrides. */
+:root{--bs-primary:#d4212a;--bs-secondary:#ede9e3;--bs-dark:#1b2c41;--bs-body-bg:#f8f6f2;--bs-body-color:#546070;--bs-primary-rgb:212,33,42;--bs-secondary-rgb:237,233,227;--bs-dark-rgb:27,44,65}
+body{background:#f8f6f2;color:#546070}
+h1,h2,h3,h4,h5,h6,.form-label,label{color:#1b2c41}
+a,.text-primary{color:#d4212a!important}
+.navbar,.navbar.bg-dark{background:#fff!important}
+.navbar .navbar-nav .nav-link{color:#1b2c41!important}
+.navbar .navbar-nav .nav-link:hover,.navbar .navbar-nav .nav-link.active{color:#d4212a!important}
+.navbar-toggler{color:#1b2c41;border-color:#d7dbdf}
+.navbar-toggler-icon{filter:invert(1)}
+.title h1,.title h5{text-shadow:none!important;border-color:transparent!important}
+.title h5{color:#d4212a}
+.title h5::before,.title h5::after{border-color:transparent!important}
+.carousel-caption{background:linear-gradient(90deg,rgba(22,34,46,.78),rgba(22,34,46,.18))}
+.carousel-caption h1,.carousel-caption h5,.carousel-caption p{color:white}
+.carousel-caption h1 em{color:#ffc278}
+.btn-outline-primary,.carousel-caption .btn,.floating.btn{background:#d4212a!important;color:#fff!important;border-color:#d4212a!important}
+.btn-outline-primary:hover,.carousel-caption .btn:hover,.floating.btn:hover{background:#b51c24!important;color:#fff!important;border-color:#b51c24!important}
+.btn-outline-primary.active,.tabs .active{background:#b51c24!important;color:#fff!important}
+.bg-secondary,#ContactUs{background:#ede9e3!important}
+.service-item.service-item-left{background:linear-gradient(to right,#f8e6d6,#fff8f2)}
+.service-item.service-item-right{background:linear-gradient(to left,#f8e6d6,#fff8f2)}
+.service-item .service-img::before{border-color:rgba(248,218,188,.8)}
+.coastal-card{background:#fff;border-color:#d7dbdf}
+.coastal-card .location-caption{background:#fff!important;color:#1b2c41!important;border-color:#d7dbdf}
+.coastal-card .location-caption:hover{color:#d4212a!important}
+.coastal-card .team-after button,.coastal-card .team-body .team-after .overlay-price{color:#ffc278}
+.coastal-card .team-name:focus-visible,.coastal-card:focus-within .location-caption{outline-color:#d4212a}
+.form-control,.form-select{background:#fff;color:#546070;border-color:#d7dbdf}
+.footer,.footer.bg-dark{background:#1b2c41!important;color:#fff}
+.footer p,.footer h1,.footer h2,.footer h3{color:#fff}
+.footer a{color:#fff!important}
+dialog{background:#fff;color:#546070;border-color:#d7dbdf}
+.detail-text .button{color:#d4212a;border-color:#d4212a}
+.muted{color:#546070}
+@media(max-width:767.98px){.service-item.service-item-left,.service-item.service-item-right{background:linear-gradient(to bottom,#f8e6d6,#fff8f2)}}

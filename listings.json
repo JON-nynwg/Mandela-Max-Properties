@@ -1,0 +1,43 @@
+[
+  {
+    "id": "kitengela-townhouse-sale",
+    "title": "4-bedroom all-ensuite townhouse",
+    "location": "Kitengela",
+    "type": "sale",
+    "price": 19900000,
+    "beds": 4,
+    "description": "A four-bedroom all-ensuite townhouse with a domestic staff quarter (DSQ). Contact us for current availability and a viewing.",
+    "image": "building-1.webp"
+  },
+  {
+    "id": "kitengela-bungalow",
+    "title": "3-bedroom bungalow on a 50 \u00d7 100 plot",
+    "location": "Kitengela",
+    "type": "sale",
+    "price": 7500000,
+    "beds": 3,
+    "description": "A three-bedroom bungalow on a 50 \u00d7 100 plot. Ask our team for the exact location, title information and viewing arrangements.",
+    "image": "building-2.webp"
+  },
+  {
+    "id": "kitengela-townhouse-rent",
+    "title": "4-bedroom townhouse with DSQ",
+    "location": "Kitengela",
+    "type": "rent",
+    "price": 55000,
+    "beds": 4,
+    "description": "An all-ensuite four-bedroom townhouse with a domestic staff quarter (DSQ). Confirm current rental terms with our team.",
+    "image": "building-3.webp"
+  },
+  {
+    "id": "syokimau-apartments",
+    "title": "2- and 3-bedroom apartments",
+    "location": "Syokimau",
+    "type": "rent",
+    "price": 33000,
+    "priceMax": 35000,
+    "beds": "2\u20133",
+    "description": "Apartment options in Syokimau with indicative rents ranging from KES 33,000 to KES 35,000 per month. Contact us to confirm the units currently available.",
+    "image": "interior.webp"
+  }
+]
