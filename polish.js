@@ -6,4 +6,6 @@
  });
  document.querySelectorAll('img:not([loading]):not(.video-banner)').forEach(i=>i.loading='lazy');
  const m=document.querySelector('main')||document.getElementById('OurProjects')||document.querySelector('.page-header2');
+ const wanted=new URLSearchParams(location.search).get('filter');
+ if(page==='properties.html'&&wanted){document.querySelectorAll('.nav-pill').forEach(a=>{if(a.getAttribute('href').endsWith('filter='+wanted)){a.classList.add('active');a.setAttribute('aria-current','page')}})}
 })();
