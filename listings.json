@@ -4,6 +4,7 @@
     "title": "4-bedroom all-ensuite townhouse",
     "location": "Kitengela",
     "type": "sale",
+    "category": "house",
     "price": 19900000,
     "beds": 4,
     "description": "A four-bedroom all-ensuite townhouse with a domestic staff quarter (DSQ). Contact us for current availability and a viewing.",
@@ -14,6 +15,7 @@
     "title": "3-bedroom bungalow on a 50 \u00d7 100 plot",
     "location": "Kitengela",
     "type": "sale",
+    "category": "house",
     "price": 7500000,
     "beds": 3,
     "description": "A three-bedroom bungalow on a 50 \u00d7 100 plot. Ask our team for the exact location, title information and viewing arrangements.",
@@ -24,6 +26,7 @@
     "title": "4-bedroom townhouse with DSQ",
     "location": "Kitengela",
     "type": "rent",
+    "category": "house",
     "price": 55000,
     "beds": 4,
     "description": "An all-ensuite four-bedroom townhouse with a domestic staff quarter (DSQ). Confirm current rental terms with our team.",
@@ -34,10 +37,134 @@
     "title": "2- and 3-bedroom apartments",
     "location": "Syokimau",
     "type": "rent",
+    "category": "house",
     "price": 33000,
     "priceMax": 35000,
     "beds": "2\u20133",
     "description": "Apartment options in Syokimau with indicative rents ranging from KES 33,000 to KES 35,000 per month. Contact us to confirm the units currently available.",
     "image": "interior.webp"
+  },
+  {
+    "id": "syokimau-katani-2br-rent",
+    "title": "Spacious 2-bedroom master en-suite",
+    "location": "Syokimau",
+    "type": "rent",
+    "category": "house",
+    "price": 30000,
+    "beds": 2,
+    "description": "A spacious 2-bedroom master en-suite apartment for rent in Katani, Syokimau, 6 km off Mombasa Road. Features: master en-suite, semi-open-plan kitchen, dining area, ample parking, gated community. Confirm current availability with our team.",
+    "image": "katani-exterior.webp",
+    "images": [
+      "katani-exterior.webp",
+      "katani-living-dining.webp",
+      "katani-bedroom-ensuite.webp",
+      "katani-bathroom.webp",
+      "katani-room.webp",
+      "katani-hallway.webp"
+    ]
+  },
+  {
+    "id": "ngatataek-10-acres-sale",
+    "title": "10 acres at Ngatataek, Kajiado",
+    "location": "Ngatataek, Kajiado",
+    "type": "sale",
+    "category": "land",
+    "price": 6000000,
+    "priceNote": "KES 600,000 per acre",
+    "size": "10 acres",
+    "description": "10 acres for sale at Ngatataek, Kajiado County, at KES 600,000 per acre. Ready title deed. 3 km off Namanga Road, touching a well-accessible rough road. Virgin land with red soil. A good opportunity for saccos, chamas and companies. Contact us to confirm availability and arrange a site visit.",
+    "image": "ngatataek-road.webp",
+    "images": [
+      "ngatataek-road.webp",
+      "ngatataek-fence.webp",
+      "ngatataek-field.webp",
+      "ngatataek-view.webp"
+    ]
+  },
+  {
+    "id": "syokimau-3br-apartment-sale",
+    "title": "3-bedroom apartment in Syokimau",
+    "location": "Syokimau",
+    "type": "sale",
+    "category": "house",
+    "price": 10700000,
+    "beds": 3,
+    "size": "141.5\u2013147 sqm",
+    "description": "A 3-bedroom apartment (141.5\u2013147 sqm) in an exclusive residential development on 5 acres, just behind Gateway Mall along Mwananchi Road, Syokimau. The development has direct access via the JKIA Expressway toll station exit and is close to JKIA, the Nairobi SGR terminus and the Nairobi Expressway. Units range from studios to 4-bedroom residences. Call 0712 800 135 for details and to arrange a viewing.",
+    "featureGroups": [
+      {
+        "title": "Amenities",
+        "items": [
+          "Olympic-size swimming pool",
+          "Fully equipped gym",
+          "High-speed elevators",
+          "Rooftop terrace & lounge caf\u00e9",
+          "Supermarket & grocery stores",
+          "Backup generator & borehole",
+          "CCTV surveillance & 24/7 security",
+          "Ample parking spaces",
+          "Children's play area",
+          "Lush landscaped gardens"
+        ]
+      },
+      {
+        "title": "Interior features",
+        "items": [
+          "Fully fitted kitchen with hob & hood",
+          "Hot water system & double sinks",
+          "Gypsum ceilings & decorative light fixtures",
+          "Smart lock entry with camera",
+          "Soundproof doors & windows",
+          "Video intercom system",
+          "Shoe rack & TV wall panel",
+          "Bluetooth-controlled lighting",
+          "Smart bathroom mirror",
+          "Curtain rails & mini pantry"
+        ]
+      }
+    ],
+    "image": "rise-courtyard.webp",
+    "images": [
+      "rise-courtyard.webp",
+      "rise-pool.webp",
+      "rise-living-1.webp",
+      "rise-living-2.webp",
+      "rise-kitchen-1.webp",
+      "rise-kitchen-2.webp",
+      "rise-bathroom.webp",
+      "rise-balcony.webp",
+      "rise-grounds.webp"
+    ]
+  },
+  {
+    "id": "mlolongo-godown-rent",
+    "title": "8,300 sq ft godown / warehouse",
+    "location": "Mlolongo",
+    "type": "rent",
+    "category": "godown",
+    "price": 230000,
+    "size": "8,300 sq ft",
+    "description": "A spacious 8,300 sq ft godown / warehouse for rent in Mlolongo, along Mombasa Road. Two levels of open storage, a ground-floor reception area with gents and ladies washrooms, two levels of office space, ample parking and a borehole on site. Call 0712 800 135 to confirm availability and arrange a viewing.",
+    "featureGroups": [
+      {
+        "title": "Features",
+        "items": [
+          "2 levels of open storage",
+          "Reception area on the ground floor",
+          "Gents and ladies washrooms",
+          "2 levels of office space",
+          "Ample parking spaces",
+          "Borehole water on site"
+        ]
+      }
+    ],
+    "image": "mlolongo-gates.webp",
+    "images": [
+      "mlolongo-gates.webp",
+      "mlolongo-exterior-1.webp",
+      "mlolongo-floor-1.webp",
+      "mlolongo-floor-2.webp",
+      "mlolongo-floor-3.webp"
+    ]
   }
 ]
