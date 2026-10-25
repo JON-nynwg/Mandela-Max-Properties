@@ -61,6 +61,9 @@
       "katani-bathroom.webp",
       "katani-room.webp",
       "katani-hallway.webp"
+    ],
+    "areas": [
+      "Katani"
     ]
   },
   {
@@ -134,6 +137,11 @@
       "rise-bathroom.webp",
       "rise-balcony.webp",
       "rise-grounds.webp"
+    ],
+    "areas": [
+      "Gateway Mall",
+      "Mwananchi",
+      "SGR Area"
     ]
   },
   {
