@@ -119,3 +119,5 @@ body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 @media(max-width:575px){.filter-panel{grid-template-columns:repeat(2,1fr)}.fp-reset{grid-column:span 2}.fp-mode{grid-column:span 2}}
 
 .about-photo{width:100%;max-height:640px;object-fit:cover;object-position:center 30%;border-radius:8px}
+
+.admin-link{opacity:.55;font-size:.8rem}.admin-link:hover{opacity:1}

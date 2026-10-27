@@ -1,5 +1,6 @@
 let listings = [], filter = 'all';
 const S = { mode: 'all', town: 'all', place: 'all', beds: 'any', pmin: 0, pmax: 0 };
+const A = n => /^https?:/.test(n) ? n : 'assets/' + n;
 const grid = document.getElementById('listing-grid');
 const dialog = document.getElementById('detail');
 
@@ -162,7 +163,7 @@ function render() {
   const ids = saved();
   let items = listings.filter(x => matches(x, filter, ids) && passes(x));
   if (grid.dataset.limit) items = items.slice(0, +grid.dataset.limit);
-  grid.innerHTML = items.map(x => `<div class="col-lg-3 col-md-6"><article class="property-card team-item coastal-card"><div class="team-body"><div class="team-before" aria-hidden="true"><span>▱</span><span>⌂</span><span>KSh</span><span>◎</span></div><img src="assets/${x.image}" alt="Property gallery photograph" loading="lazy"><div class="team-after"><span>${metaText(x)}</span><span class="overlay-title">${x.title}</span><span class="overlay-price">${price(x)}</span><span class="overlay-note">Call to confirm availability</span><button data-detail="${x.id}">Property details</button></div><span class="badge">${badgeText(x)}</span><button class="save" data-save="${x.id}" aria-label="${ids.includes(x.id) ? 'Unsave' : 'Save'} ${x.title}" aria-pressed="${ids.includes(x.id)}">${ids.includes(x.id) ? '♥' : '♡'}</button></div><button class="location-caption" data-detail="${x.id}" aria-label="View ${x.title} in ${x.location}">${x.location}</button></article></div>`).join('');
+  grid.innerHTML = items.map(x => `<div class="col-lg-3 col-md-6"><article class="property-card team-item coastal-card"><div class="team-body"><div class="team-before" aria-hidden="true"><span>▱</span><span>⌂</span><span>KSh</span><span>◎</span></div><img src="${A(x.image)}" alt="Property gallery photograph" loading="lazy"><div class="team-after"><span>${metaText(x)}</span><span class="overlay-title">${x.title}</span><span class="overlay-price">${price(x)}</span><span class="overlay-note">Call to confirm availability</span><button data-detail="${x.id}">Property details</button></div><span class="badge">${badgeText(x)}</span><button class="save" data-save="${x.id}" aria-label="${ids.includes(x.id) ? 'Unsave' : 'Save'} ${x.title}" aria-pressed="${ids.includes(x.id)}">${ids.includes(x.id) ? '♥' : '♡'}</button></div><button class="location-caption" data-detail="${x.id}" aria-label="View ${x.title} in ${x.location}">${x.location}</button></article></div>`).join('');
 
   const empty = document.getElementById('empty');
   if (empty) {
@@ -199,7 +200,7 @@ function related(x) {
 }
 function gallery(x) {
   if (!Array.isArray(x.images) || x.images.length < 2) return '';
-  return `<div class="gallery" aria-label="More photos">${x.images.map((im, i) => `<button type="button" class="${i === 0 ? 'active' : ''}" data-photo="assets/${im}" aria-label="Show photo ${i + 1} of ${x.images.length}"><img src="assets/${im}" alt="" loading="lazy"></button>`).join('')}</div>`;
+  return `<div class="gallery" aria-label="More photos">${x.images.map((im, i) => `<button type="button" class="${i === 0 ? 'active' : ''}" data-photo="${A(im)}" aria-label="Show photo ${i + 1} of ${x.images.length}"><img src="${A(im)}" alt="" loading="lazy"></button>`).join('')}</div>`;
 }
 function features(x) {
   if (!Array.isArray(x.featureGroups) || !x.featureGroups.length) return '';
@@ -210,8 +211,8 @@ function detail(id) {
   if (!x) return;
   const facts = [metaText(x), ...(cat(x) === 'house' && x.size ? [x.size] : []), CATEGORIES[cat(x)] + ' ' + (x.type === 'sale' ? 'for sale' : 'for rent'), x.location];
   const rel = related(x);
-  const relHtml = rel.length ? `<div class="related"><h3>Other properties you may like</h3><p class="muted">Matched by bedrooms, type and area.</p><div class="related-grid">${rel.map(r => `<button type="button" class="related-card" data-detail="${r.v.id}"><img src="assets/${r.v.image}" alt="" loading="lazy"><span class="r-body"><span class="r-title">${r.v.title}</span><span class="r-meta">${r.v.location} · ${metaText(r.v)}</span><span class="r-price">${price(r.v)}</span><span class="r-tags">${r.tags.map(t => `<em>${t}</em>`).join('')}</span></span></button>`).join('')}</div></div>` : '';
-  document.getElementById('detail-content').innerHTML = `<img class="detail-image" id="detail-main" src="assets/${x.image}" alt="Property gallery photograph">${gallery(x)}<div class="detail-text"><span class="eyebrow">${x.location} · ${badgeText(x)}</span><h2>${x.title}</h2><p class="price">${price(x)}</p><ul class="facts">${facts.map(f => `<li>${f}</li>`).join('')}</ul><p>${x.description}</p>${features(x)}<p class="muted">Contact our team to confirm current availability and arrange a viewing.</p><p>Viewing fee: KES 2,000. Confirm arrangements with our team.</p><a class="button" href="https://wa.me/254722979636?text=${encodeURIComponent('Hello Mandelamax, I would like to enquire about ' + x.title + ' in ' + x.location + ' (' + price(x) + '). Please confirm availability and viewing details.')}">Enquire on WhatsApp</a></div>${relHtml}`;
+  const relHtml = rel.length ? `<div class="related"><h3>Other properties you may like</h3><p class="muted">Matched by bedrooms, type and area.</p><div class="related-grid">${rel.map(r => `<button type="button" class="related-card" data-detail="${r.v.id}"><img src="${A(r.v.image)}" alt="" loading="lazy"><span class="r-body"><span class="r-title">${r.v.title}</span><span class="r-meta">${r.v.location} · ${metaText(r.v)}</span><span class="r-price">${price(r.v)}</span><span class="r-tags">${r.tags.map(t => `<em>${t}</em>`).join('')}</span></span></button>`).join('')}</div></div>` : '';
+  document.getElementById('detail-content').innerHTML = `<img class="detail-image" id="detail-main" src="${A(x.image)}" alt="Property gallery photograph">${gallery(x)}<div class="detail-text"><span class="eyebrow">${x.location} · ${badgeText(x)}</span><h2>${x.title}</h2><p class="price">${price(x)}</p><ul class="facts">${facts.map(f => `<li>${f}</li>`).join('')}</ul><p>${x.description}</p>${features(x)}<p class="muted">Contact our team to confirm current availability and arrange a viewing.</p><p>Viewing fee: KES 2,000. Confirm arrangements with our team.</p><a class="button" href="https://wa.me/254722979636?text=${encodeURIComponent('Hello Mandelamax, I would like to enquire about ' + x.title + ' in ' + x.location + ' (' + price(x) + '). Please confirm availability and viewing details.')}">Enquire on WhatsApp</a></div>${relHtml}`;
   if (!dialog.open) dialog.showModal();
   dialog.scrollTop = 0;
 }
@@ -287,9 +288,8 @@ if (form) form.onsubmit = e => {
 if (grid) {
   const wanted = new URLSearchParams(location.search).get('filter');
   if (wanted && validFilter(wanted) && !grid.dataset.limit) filter = wanted;
-  fetch('listings.json')
-    .then(r => { if (!r.ok) throw Error(); return r.json(); })
-    .then(x => { listings = x; fillLocations(); render(); })
+  loadListings()
+    .then(x => { listings = x; fillLocations(); render(); const o = new URLSearchParams(location.search).get('open'); if (o) detail(o); })
     .catch(() => {
       grid.innerHTML = '<p>Property information could not load. Please call <a href="tel:+254722979636">0722 979 636</a> for current listings.</p>';
     });
