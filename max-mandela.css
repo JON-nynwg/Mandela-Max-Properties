@@ -1,0 +1,19 @@
+/* Cream surfaces with red, white and navy-derived service tones. */
+:root{--max-cream:#fff4df;--max-navy:#7a3b2e;--max-red:#bf3548;--bs-body-bg:var(--max-cream);--bs-white:var(--max-cream);--bs-white-rgb:255,244,223}
+body{background:var(--max-cream)}
+.navbar,.navbar.bg-dark,.navbar-brand img,.footer-logo{background:var(--max-cream)!important}
+.coastal-card,.coastal-card .location-caption,.form-control,.form-select,.form-control:focus,.form-select:focus,dialog,.save,.close,.bg-white{background:var(--max-cream)!important}
+.bg-secondary,#ContactUs{background:#f1e5d2!important}
+.carousel-caption h1,.carousel-caption h5,.carousel-caption p,.footer,.footer p,.footer h1,.footer h2,.footer h3,.footer a,.btn-outline-primary,.floating.btn{color:var(--max-cream)!important}
+.service-item.service-item-left{background:linear-gradient(105deg,#efd0d0 0%,#f8e6db 65%,#fff4df 100%)}
+.service-item.service-item-right{background:linear-gradient(255deg,#f4c9a8 0%,#f7dcc3 60%,#fff1e0 100%)}
+.service-item-left .service-text h3{color:#8e293c}
+.service-item-left .service-text p{color:#29374a}
+.service-item-right .service-text h3{color:#a4281f}
+.service-item-right .service-text p{color:#3a2f2a}
+.service-item-left .service-img::before{border-color:rgba(191,53,72,.22)}
+.service-item-right .service-img::before{border-color:rgba(191,53,72,.22)}
+@media(max-width:767px){
+ .service-item.service-item-left{background:linear-gradient(to bottom,#efd0d0,#fff4df)}
+ .service-item.service-item-right{background:linear-gradient(to bottom,#f4c9a8,#fff1e0)}
+}

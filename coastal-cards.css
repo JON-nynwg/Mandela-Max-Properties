@@ -1,0 +1,80 @@
+.team-item {
+    position: relative;
+}
+
+    .team-item .team-name {
+        position: absolute;
+        width: 100%;
+        height: 60px;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        display: -webkit-flex;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        background: rgba(0, 0, 0, .7);
+    }
+
+    .team-item .team-body {
+        position: relative;
+        overflow: hidden;
+    }
+
+        .team-item .team-body .team-before,
+        .team-item .team-body .team-after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: calc(100% - 60px);
+            height: -webkit-calc(100% - 60px);
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, .7);
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: column;
+            justify-content: center;
+            -webkit-justify-content: center;
+            transition: .5s;
+            -webkit-transition: .5s;
+        }
+
+        .team-item .team-body .team-after {
+            left: auto;
+            right: 0;
+        }
+
+        .team-item .team-body .team-before {
+            text-align: right;
+        }
+    .team-item:hover .team-body .team-after {
+        width: 80%;
+    }
+    .team-item:hover .team-body .team-before {
+        width: 20%;
+    }
+
+    .team-item .team-body .team-before span,
+    .team-item .team-body .team-after span {
+        margin: 5px;
+        color: var(--bs-white);
+        opacity: 0;
+        transition: .5s;
+        -webkit-transition: .5s;
+    }
+
+    .team-item:hover .team-body .team-before span,
+    .team-item:hover .team-body .team-after span {
+        opacity: 1;
+        transition-delay: .2s;
+    }
+
+
+
+/* Keep the source effect and support keyboard and touch input. */
+.coastal-card{height:360px;border:0;border-radius:0;background:transparent;box-shadow:none}.coastal-card .team-body,.coastal-card .team-body>img{height:360px;width:100%;object-fit:cover}.coastal-card .team-name{border:0;padding:0;z-index:4;color:#fff;cursor:pointer}.coastal-card .team-name h5{color:#fff;font-size:16px;text-transform:uppercase;margin:0;letter-spacing:.05em}.coastal-card .team-body .team-before,.coastal-card .team-body .team-after{z-index:2;overflow:hidden;background:rgba(0,0,0,.7)}.coastal-card .team-body .team-after span{font-size:14px;line-height:1.4}.coastal-card .team-body .team-before span{font-size:14px}.coastal-card .team-after button{opacity:0;transition:opacity .5s;color:#ffc379;background:none;border:0;text-align:left;font-size:13px;margin:5px;padding:0}.coastal-card:hover .team-after button,.coastal-card:focus-within .team-after button{opacity:1;transition-delay:.2s}.coastal-card:focus-within .team-body .team-before{width:20%}.coastal-card:focus-within .team-body .team-after{width:80%}.coastal-card:focus-within .team-body .team-before span,.coastal-card:focus-within .team-body .team-after span{opacity:1;transition-delay:.2s}.coastal-card .save,.coastal-card .badge{z-index:5}.coastal-card .save{line-height:1}.coastal-card .team-name:focus-visible{outline:3px solid #ef8c21;outline-offset:-3px}@media(hover:none){.coastal-card .team-body .team-before{width:20%}.coastal-card .team-body .team-after{width:80%}.coastal-card .team-body .team-before span,.coastal-card .team-body .team-after span,.coastal-card .team-after button{opacity:1}}@media(prefers-reduced-motion:reduce){.coastal-card .team-body .team-before,.coastal-card .team-body .team-after,.coastal-card .team-body span,.coastal-card .team-after button{transition:none!important;transition-delay:0s!important}}
+
+/* Location is beneath the photo; all other listing information is revealed over it. */
+.coastal-card{height:auto;background:#fff;display:flex;flex-direction:column;border:1px solid #e8e5df}.coastal-card .team-body,.coastal-card .team-body>img{height:360px}.coastal-card .team-body .team-before,.coastal-card .team-body .team-after{height:100%}.coastal-card .location-caption{display:block;position:relative;flex-shrink:0;width:100%;min-height:60px;border:0;border-top:1px solid #e8e5df;padding:16px 20px;text-align:center;background:#fff;color:#14283f;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;cursor:pointer}.coastal-card .location-caption:hover{color:#d51b26}.coastal-card .team-body .team-after{padding-top:40px;padding-bottom:15px;gap:8px}.coastal-card .team-body .team-after span{margin:0 14px 0 6px}.coastal-card .team-body .team-after .overlay-title{font-size:18px;font-weight:700;line-height:1.35}.coastal-card .team-body .team-after .overlay-price{color:#ffc379;font-size:16px;font-weight:700}.coastal-card .team-body .team-after .overlay-note{font-size:12px;color:#d6dee5}.coastal-card .team-after button{margin:5px 14px 0 6px;font-size:14px;font-weight:700}.coastal-card .team-before{gap:15px}.coastal-card:focus-within .location-caption{outline:2px solid #ef8c21;outline-offset:-2px}@media(max-width:600px){.coastal-card .team-body,.coastal-card .team-body>img{height:360px}}
